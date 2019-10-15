@@ -31,8 +31,10 @@ class TicTacToeNode
     children = self.children
     if next_mover_mark == evaluator
       return !children.any? {|child| child.winning_node?(evaluator)}
+      
     else
       return !children.all? {|child| child.winning_node?(evaluator)}
+      
     end
   end
 

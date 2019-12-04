@@ -17,5 +17,10 @@ end
 
 def my_transpose(arr)
     raise TypeError unless arr.is_a?(Array)
-    return arr
+    return_arr = []
+    arr.length.times { return_arr << [] }
+    (0...arr.length).each do |idx|
+        arr.each { |row| return_arr[idx] << row[idx]} 
+    end
+    return return_arr
 end

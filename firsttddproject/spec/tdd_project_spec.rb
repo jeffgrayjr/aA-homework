@@ -41,4 +41,12 @@ describe "#my_transpose" do
 
         expect { my_transpose(123456987) }.to raise_error(TypeError)
     end
+
+    it "tranposes rows and columns" do
+        expect(my_transpose([
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8]
+        ])).to eq([[0, 3, 6], [1, 4, 7], [2, 5, 8]])
+    end
 end
